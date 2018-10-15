@@ -370,7 +370,7 @@ class App extends Component {
             </div>
           </footer>
         </div>
-        <div id="preload">
+        {/* <div id="preload">
           <img src="img/me.png" alt="garvit_img"/>
           <img src="img/filler.jpg" alt="filler"/>
           <img src="img/thumb-1.jpg" alt="thumb-1"/>
@@ -401,7 +401,7 @@ class App extends Component {
           <img src="img/slides/walker-0.jpg" alt="walker-0"/>
           <img src="img/slides/walker-1.jpg" alt="walker-1"/>
           <img src="img/slides/walker-2.jpg" alt="walker-2"/>
-        </div>
+        </div> */}
     </div>
     );
   }
