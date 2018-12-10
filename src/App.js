@@ -335,7 +335,7 @@ class App extends Component {
               <div className="header waypoint" data-animation="slide-in-left">CONTACT</div>
               <div className="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
               <div className="highlight waypoint" data-animation="slide-in-right" data-delay=".5s">Have a question or want to work together?</div>
-              <form className="waypoint" data-animation="pop-in" data-delay=".5s" id="contact-form">
+              <form method="POST" action="https://formspree.io/garvitjoshi@hotmail.com" className="waypoint" data-animation="pop-in" data-delay=".5s" >
                 <input placeholder="Name" type="text" name="name" required />
                 <input placeholder="Enter email" type="email" name="email" required />
                 <textarea placeholder="Your Message" type="text" name="message"></textarea>
