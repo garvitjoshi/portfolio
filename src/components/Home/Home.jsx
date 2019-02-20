@@ -42,7 +42,7 @@ class Home extends Component {
               <div className="text">
                 Hello, I'm <span className="highlight">Garvit Joshi</span>.
                 <br />
-                I'm a full-stack web developer.
+                I'm a full-stack developer.
               </div>
               <div className="button page-link" dest="about">
                 View my work <i className="mdi mdi-arrow-right" />
