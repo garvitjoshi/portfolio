@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
   // MODAL
   var modalText = {
@@ -36,47 +36,55 @@ $(document).ready(function(){
     }
   };
 
-  $('#gallery .button').on('click', function(){
+  $('#gallery .button').on('click', function () {
     fillModal(this.id);
     $('.modal-wrap').addClass('visible');
   });
 
-  $('.close').on('click', function(){
+  $('.close').on('click', function () {
     $('.modal-wrap, #modal .button').removeClass('visible');
   });
 
-  $('.mask').on('click', function(){
+  $('.mask').on('click', function () {
     $('.modal-wrap, #modal .button').removeClass('visible');
   });
 
   var carousel = $('#carousel'),
-      slideWidth = 700,
-      threshold = slideWidth/3,
-      dragStart, 
-      dragEnd;
+    slideWidth = 700,
+    threshold = slideWidth / 3,
+    dragStart,
+    dragEnd;
 
   setDimensions();
 
-  $('#next').click(function(){ shiftSlide(-1) })
-  $('#prev').click(function(){ shiftSlide(1) })
+  $('#next').click(function () {
+    shiftSlide(-1)
+  })
+  $('#prev').click(function () {
+    shiftSlide(1)
+  })
 
-  carousel.on('mousedown', function(){
+  carousel.on('mousedown', function () {
     if (carousel.hasClass('transition')) return;
     dragStart = event.pageX;
-    $(this).on('mousemove', function(){
+    $(this).on('mousemove', function () {
       dragEnd = event.pageX;
-      $(this).css('transform','translateX('+ dragPos() +'px)');
+      $(this).css('transform', 'translateX(' + dragPos() + 'px)');
     });
-    $(document).on('mouseup', function(){
-      if (dragPos() > threshold) { return shiftSlide(1) }
-      if (dragPos() < -threshold) { return shiftSlide(-1) }
+    $(document).on('mouseup', function () {
+      if (dragPos() > threshold) {
+        return shiftSlide(1)
+      }
+      if (dragPos() < -threshold) {
+        return shiftSlide(-1)
+      }
       shiftSlide(0);
     });
   });
 
   function setDimensions() {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-     slideWidth = $(window).innerWidth();
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      slideWidth = $(window).innerWidth();
     }
     $('.carousel-wrap, .slide').css('width', slideWidth);
     $('.modal').css('max-width', slideWidth);
@@ -92,17 +100,17 @@ $(document).ready(function(){
     dragEnd = dragStart;
     $(document).off('mouseup')
     carousel.off('mousemove')
-            .addClass('transition')
-            .css('transform','translateX(' + (direction * slideWidth) + 'px)'); 
-    setTimeout(function(){
+      .addClass('transition')
+      .css('transform', 'translateX(' + (direction * slideWidth) + 'px)');
+    setTimeout(function () {
       if (direction === 1) {
         $('.slide:first').before($('.slide:last'));
       } else if (direction === -1) {
         $('.slide:last').after($('.slide:first'));
       }
       carousel.removeClass('transition')
-      carousel.css('transform','translateX(0px)'); 
-    },700)
+      carousel.css('transform', 'translateX(0px)');
+    }, 700)
   }
 
   function fillModal(id) {
@@ -110,18 +118,18 @@ $(document).ready(function(){
     $('#modal .detail').text(modalText[id].detail);
     $('#modal .tag').text(modalText[id].tag);
     if (modalText[id].link) $('#modal .button').addClass('visible')
-                                               .parent()
-                                               .attr('href', modalText[id].link)
+      .parent()
+      .attr('href', modalText[id].link)
 
-    $.each($('#modal li'), function(index, value ) {
+    $.each($('#modal li'), function (index, value) {
       $(this).text(modalText[id].bullets[index]);
     });
-    $.each($('#modal .slide'), function(index, value) {
+    $.each($('#modal .slide'), function (index, value) {
       $(this).css({
         background: "url('img/slides/" + id + '-' + index + ".jpg') center center/cover",
         backgroundSize: 'cover'
       });
-              
+
     });
   }
 })
