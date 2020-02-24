@@ -113,7 +113,7 @@ class About extends Component {
               className="flex flex-50-gt-sm waypoint"
               data-animation="slide-in-left"
             >
-              <img src="img/me.png" className="me" alt="garvit_img" />
+              <img src="img/garvit/IMG_20181117_201320.jpg" className="me" alt="garvit_img" />
               {/* <!-- <div><img className="up-arrow" src="img/up-arrow.png"></div> --> */}
               <div className="label bold">Who's this guy?</div>
               <div>

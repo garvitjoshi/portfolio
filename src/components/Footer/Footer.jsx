@@ -9,7 +9,7 @@ class Footer extends Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/garvit-joshi/"
+            href="https://www.linkedin.com/in/garvit11joshi/"
           >
             <div className="flex icon" id="icon-2">
               <i className="mdi mdi-linkedin" />
@@ -27,7 +27,7 @@ class Footer extends Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.facebook.com/joshigarvit"
+            href="https://www.facebook.com/garvit11joshi"
           >
             <div className="flex icon" id="icon-3">
               <i className="mdi mdi-facebook" />
@@ -36,7 +36,7 @@ class Footer extends Component {
         </div>
         <div className="info-box">
           <div className="footnote">
-            GARVIT JOSHI <span className="highlight">&copy;2019</span>
+            GARVIT JOSHI <span className="highlight">&copy;2020</span>
           </div>
         </div>
       </footer>
