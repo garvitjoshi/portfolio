@@ -32,6 +32,9 @@ class Header extends Component {
               <div className="page-link" dest="contact">
                 contact
               </div>
+              <div className="page-link" dest="resume">
+              <a target="_blank" href="/Garvit_Resume.pdf">Resume</a>
+              </div>
             </div>
             <i className="mdi mdi-menu" />
           </nav>
