@@ -36,7 +36,7 @@ class Footer extends Component {
         </div>
         <div className="info-box">
           <div className="footnote">
-            GARVIT JOSHI <span className="highlight">&copy;2020</span>
+            GARVIT JOSHI <span className="highlight">&copy;2021</span>
           </div>
         </div>
       </footer>
